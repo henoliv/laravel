@@ -1,4 +1,4 @@
 <?php
 Route::get('/', function () {
-    return 'primeira lógica com Laravel';
+    return '<h1>Primeira lógica com Laravel</h1>';
 });
