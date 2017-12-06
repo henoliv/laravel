@@ -11,6 +11,8 @@ class ProdutoController extends Controller
         # Coletando
         $produtos = DB::select("SELECT * from produtos");
 
-        return view('listagem')->with('produtos', $produtos);
+        if (view()->exists('listagem')) {
+            return view('listagem')->withProdutos($produtos);
+        }
     }
 }
