@@ -41,7 +41,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'mysql.henrique.x-br.com'),
+            'host' => env('DB_HOST', 'web133.f1.k8.com.br'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'henrique'),
             'username' => env('DB_USERNAME', 'henrique'),

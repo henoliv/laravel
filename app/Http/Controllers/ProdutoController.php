@@ -6,20 +6,11 @@ use Illuminate\Support\Facades\DB;
 
 class ProdutoController extends Controller
 {
-    public function lista(): string
+    public function lista()
     {
         # Coletando
         $produtos = DB::select("SELECT * from produtos");
 
-        $html = "<h1>Listagem de produtos com Laravel</h1>";
-        $html .= "<ul>";
-
-        foreach ($produtos as $produto) {
-            $html .= "<li>Nome: {$produto->nome}, Descrição: {$produto->descricao}</li>";
-        }
-
-        $html .= "</ul>";
-
-        return $html;
+        return view('listagem')->with('produtos', $produtos);
     }
 }
