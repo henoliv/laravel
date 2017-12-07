@@ -15,4 +15,19 @@ class ProdutoController extends Controller
             return view('listagem')->withProdutos($produtos);
         }
     }
+
+    public function mostra()
+    {
+        $id = 1;
+        # Coletando
+        $produtos = DB::select("SELECT * from produtos where id = ?", [$id]);
+
+        if (empty($produtos)) {
+            return 'Este produto não existe';
+        }
+
+        if (view()->exists('detalhes')) {
+            return view('detalhes')->withProduto(current($produtos));
+        }
+    }
 }
