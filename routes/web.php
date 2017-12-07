@@ -7,4 +7,7 @@ Route::get('/', function () {
 Route::get('/outra', function () {
     return '<h1>Outra lógica com Laravel</h1>';
 });
-Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
+Route::get(
+    '/produtos/mostra/{id}',
+    'ProdutoController@mostra'
+)->where('id', '[0-9]+');

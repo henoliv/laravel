@@ -17,7 +17,7 @@ class ProdutoController extends Controller
         }
     }
 
-    public function mostra(string $id)
+    public function mostra(int $id)
     {
         # Coletando
         $produtos = DB::select("SELECT * from produtos where id = ?", [$id]);
