@@ -16,7 +16,7 @@
 			</thead>
 			<tbody>
 				@foreach ($produtos as $produto)
-				<tr>
+				<tr class="{{$produto->quantidade <= 1 ? 'danger' : ''}}">
 					<td>{{ $produto->nome }}</td>
 					<td>{{ $produto->valor }}</td>
 					<td>{{ $produto->descricao }}</td>
