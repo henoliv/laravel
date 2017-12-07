@@ -11,22 +11,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach ($produtos as $produto): ?>
+		<?php foreach ($produtos as $produto):  ?>
 		<tr>
+			<td>{{ $produto->nome }}</td>
+			<td>{{ $produto->valor }}</td>
+			<td>{{ $produto->descricao }}</td>
+			<td>{{ $produto->quantidade }}</td>
 			<td>
-				<?=$produto->nome?>
-			</td>
-			<td>
-				<?=$produto->valor?>
-			</td>
-			<td>
-				<?=$produto->descricao?>
-			</td>
-			<td>
-				<?=$produto->quantidade?>
-			</td>
-			<td>
-				<a href="produtos/mostra/<?=$produto->id?>">
+				<a href="produtos/mostra/{{ $produto->id }}">
 					<span class="glyphicon glyphicon-search"></span>
 				</a>
 			</td>
