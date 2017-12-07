@@ -19,7 +19,9 @@ class ProdutoController extends Controller
 
     public function mostra()
     {
-        $id = Request::input('id', '0');
+        # coleta o valor da url
+        $id = Request::route('id');
+
         # Coletando
         $produtos = DB::select("SELECT * from produtos where id = ?", [$id]);
 

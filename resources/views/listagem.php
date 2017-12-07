@@ -37,7 +37,7 @@
                         <?=$produto->quantidade?>
                     </td>
                     <td>
-                        <a href="produtos/mostra?id=<?=$produto->id?>">
+                        <a href="produtos/mostra/<?=$produto->id?>">
                             <span class="glyphicon glyphicon-search"></span>
                         </a>
                     </td>
