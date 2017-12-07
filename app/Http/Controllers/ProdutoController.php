@@ -13,7 +13,7 @@ class ProdutoController extends Controller
         $produtos = DB::select("SELECT * from produtos");
 
         if (view()->exists('listagem')) {
-            return view('listagem')->withProdutos([]);
+            return view('listagem')->withProdutos($produtos);
         }
     }
 
