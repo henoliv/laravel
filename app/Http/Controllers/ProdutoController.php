@@ -3,6 +3,7 @@
 namespace Estoque\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Request;
 
 class ProdutoController extends Controller
 {
@@ -18,7 +19,7 @@ class ProdutoController extends Controller
 
     public function mostra()
     {
-        $id = 1;
+        $id = Request::input('id', '0');
         # Coletando
         $produtos = DB::select("SELECT * from produtos where id = ?", [$id]);
 
