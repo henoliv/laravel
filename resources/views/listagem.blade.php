@@ -11,7 +11,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach ($produtos as $produto):  ?>
+		@foreach ($produtos as $produto)
 		<tr>
 			<td>{{ $produto->nome }}</td>
 			<td>{{ $produto->valor }}</td>
@@ -23,7 +23,7 @@
 				</a>
 			</td>
 		</tr>
-		<?php endforeach; ?>
+		@endforeach
 	</tbody>
 </table>
 @stop
