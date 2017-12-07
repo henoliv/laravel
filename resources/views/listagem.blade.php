@@ -1,7 +1,7 @@
 @extends('principal')
 @section('conteudo')
 	@if(empty($produtos))
-		<div> Você não tem nenhum produto cadastrado </aiv>
+		<div class="alert alert-danger"> Você não tem nenhum produto cadastrado </div>
 	@else
 		<h1>Listagem de Produtos</h1>
 		<table class="table table-striped table-bordered table-hover">
