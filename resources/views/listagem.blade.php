@@ -30,10 +30,10 @@
 				@endforeach
 			</tbody>
 		</table>
-		@endif
-		<h4>
-			<span class="label label-danger pull-right">
-				Um ou menos ítens no estoque
-			</span>
-		</h4>
-	@stop
+	@endif
+	<h4>
+		<span class="label label-danger pull-right">
+			Um ou menos ítens no estoque
+		</span>
+	</h4>
+@stop
