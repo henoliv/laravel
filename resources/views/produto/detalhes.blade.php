@@ -1,4 +1,4 @@
-@extends('principal') @section('conteudo')
+@extends('layout.principal') @section('conteudo')
 <h1>Detalhes do produto: {{ $produto->nome }}
 </h1>
 <ul>

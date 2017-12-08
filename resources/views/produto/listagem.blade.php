@@ -1,4 +1,4 @@
-@extends('principal')
+@extends('layout.principal')
 @section('conteudo')
 	@if(empty($produtos))
 		<div class="alert alert-danger"> Você não tem nenhum produto cadastrado </div>

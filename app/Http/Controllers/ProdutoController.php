@@ -12,8 +12,8 @@ class ProdutoController extends Controller
         # Coletando
         $produtos = DB::select("SELECT * from produtos");
 
-        if (view()->exists('listagem')) {
-            return view('listagem')->withProdutos($produtos);
+        if (view()->exists('produto.listagem')) {
+            return view('produto.listagem')->withProdutos($produtos);
         }
     }
 
@@ -26,8 +26,8 @@ class ProdutoController extends Controller
             return 'Este produto não existe';
         }
 
-        if (view()->exists('detalhes')) {
-            return view('detalhes')->withProduto(current($produtos));
+        if (view()->exists('produto.detalhes')) {
+            return view('produto.detalhes')->withProduto(current($produtos));
         }
     }
 }
