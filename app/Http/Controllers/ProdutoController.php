@@ -37,4 +37,9 @@ class ProdutoController extends Controller
             return view('produto.formulario');
         }
     }
+
+    public function adiciona()
+    {
+        # TODO
+    }
 }
