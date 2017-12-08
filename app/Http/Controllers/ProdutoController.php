@@ -30,4 +30,11 @@ class ProdutoController extends Controller
             return view('produto.detalhes')->withProduto(current($produtos));
         }
     }
+
+    public function novo()
+    {
+        if (view()->exists('produto.formulario')) {
+            return view('produto.formulario');
+        }
+    }
 }
