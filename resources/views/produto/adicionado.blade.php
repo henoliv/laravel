@@ -1,4 +1,6 @@
 @extends('layout.principal')
 @section('conteudo')
-O produto {{$nome}} foi adicionado com sucesso!
+    <div class="alert alert-success">
+        <strong>Sucesso!</strong> O produto {{$nome}} foi adicionado.
+    </div>
 @stop
