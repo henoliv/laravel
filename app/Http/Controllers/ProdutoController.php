@@ -54,7 +54,7 @@ class ProdutoController extends Controller
 
         # retorna a view
         if (view()->exists('produto.adicionado')) {
-            return view('produto.adicionado');
+            return view('produto.adicionado')->withNome($nome);
         }
     }
 }

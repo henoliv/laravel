@@ -1,4 +1,4 @@
 @extends('layout.principal')
 @section('conteudo')
-O produto foi adicionaod com sucesso!
+O produto {{$nome}} foi adicionado com sucesso!
 @stop
