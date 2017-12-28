@@ -13,6 +13,8 @@
 						<th>Descrição</th>
 						<th>Quantidade em estoque</th>
 						<th>Detalhes</th>
+						<th>Editar</th>
+						<th>Remover</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -26,6 +28,13 @@
 							<a href="/produtos/mostra/{{ $produto->id }}">
 								<span class="glyphicon glyphicon-search"></span>
 							</a>
+						</td>
+						<td>
+							<a href="/produtos/edicao/{{ $produto->id }}">
+								<span class="glyphicon glyphicon-edit"></span>
+							</a>
+						</td>
+						<td>
 							<a href="/produtos/remove/{{ $produto->id }}">
 								<span class="glyphicon glyphicon-trash"></span>
 							</a>

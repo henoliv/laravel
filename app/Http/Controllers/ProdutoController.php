@@ -68,4 +68,31 @@ class ProdutoController extends Controller
         return redirect()
             ->action('ProdutoController@lista');
     }
+
+    public function edicao(int $id)
+    {
+        $produto = Produto::find($id);
+
+        return view('produto.formulario')->withProduto($produto);
+    }
+
+    public function edita()
+    {
+        $id = Request::input('id');
+
+        # Adiciona o produto
+        $produto = Produto::find($id);
+        
+        $produto->nome = Request::input('nome');
+        $produto->descricao = Request::input('descricao');
+        $produto->valor = Request::input('valor');
+        $produto->quantidade = Request::input('quantidade');
+
+        $produto->save();
+
+        # retorna a view
+        return redirect()
+            ->action('ProdutoController@lista')
+            ->withInput(Request::only('nome'));
+    }
 }
