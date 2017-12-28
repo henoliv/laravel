@@ -15,6 +15,10 @@ Route::get('/produtos/novo', 'ProdutoController@novo');
 # Post do formulário de adição
 Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
+# Remove um produto
+Route::get('/produtos/remove/{id}', 'ProdutoController@remove')
+    ->where('id', '[0-9]+');
+
 # Lista de produtos em json
 Route::get('/produtos/json', 'ProdutoController@listaJson');
 

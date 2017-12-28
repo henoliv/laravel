@@ -55,4 +55,17 @@ class ProdutoController extends Controller
         $produtos = Produto::all();
         return response()->json($produtos);
     }
+
+    public function remove(int $id)
+    {
+        # Encontra o produto
+        $produto = Produto::find($id);
+
+        # remove o produto
+        $produto->delete();
+
+        # retorna a view
+        return redirect()
+            ->action('ProdutoController@lista');
+    }
 }

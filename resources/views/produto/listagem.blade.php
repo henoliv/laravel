@@ -26,6 +26,9 @@
 							<a href="/produtos/mostra/{{ $produto->id }}">
 								<span class="glyphicon glyphicon-search"></span>
 							</a>
+							<a href="/produtos/remove/{{ $produto->id }}">
+								<span class="glyphicon glyphicon-trash"></span>
+							</a>
 						</td>
 					</tr>
 					@endforeach
