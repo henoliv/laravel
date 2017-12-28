@@ -19,7 +19,7 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="{{action('ProdutoController@lista')}}">Listagem</a></li>
-				<li><a href="{{action('ProdutoController@lista')}}">Novo</a></li>
+				<li><a href="{{action('ProdutoController@novo')}}">Novo</a></li>
 			</ul>
 		</div>
 	</nav>

@@ -41,21 +41,8 @@ class ProdutoController extends Controller
 
     public function adiciona()
     {
-        # coleta os dados da view
-        $nome = Request::input('nome');
-        $descricao = Request::input('descricao');
-        $valor = Request::input('valor');
-        $quantidade = Request::input('quantidade');
-
-        # salva no banco
-        DB::table('produtos')->insert(
-            [
-                'nome' => $nome,
-                'descricao' => $descricao,
-                'valor' => $valor,
-                'quantidade' => $quantidade
-            ]
-        );
+        # Adiciona o produto
+        Produto::create(Request::all());
 
         # retorna a view
         return redirect()
