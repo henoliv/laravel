@@ -3,6 +3,7 @@
 namespace Estoque\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Estoque\Produto;
 use Request;
 
 class ProdutoController extends Controller
@@ -10,7 +11,7 @@ class ProdutoController extends Controller
     public function lista()
     {
         # Coletando
-        $produtos = DB::select("SELECT * from produtos");
+        $produtos = Produto::all();
 
         if (view()->exists('produto.listagem')) {
             return view('produto.listagem')->withProdutos($produtos);
@@ -20,14 +21,14 @@ class ProdutoController extends Controller
     public function mostra(int $id)
     {
         # Coletando
-        $produtos = DB::select("SELECT * from produtos where id = ?", [$id]);
+        $produto = Produto::find($id);
 
-        if (empty($produtos)) {
+        if (empty($produto)) {
             return 'Este produto não existe';
         }
 
         if (view()->exists('produto.detalhes')) {
-            return view('produto.detalhes')->withProduto(current($produtos));
+            return view('produto.detalhes')->withProduto($produto);
         }
     }
 
@@ -64,7 +65,7 @@ class ProdutoController extends Controller
 
     public function listaJson()
     {
-        $produtos = DB::select("SELECT * from produtos");
-        return $produtos;
+        $produtos = Produto::all();
+        return response()->json($produtos);
     }
 }
