@@ -61,4 +61,10 @@ class ProdutoController extends Controller
             ->action('ProdutoController@lista')
             ->withInput(Request::only('nome'));
     }
+
+    public function listaJson()
+    {
+        $produtos = DB::select("SELECT * from produtos");
+        return $produtos;
+    }
 }

@@ -15,6 +15,9 @@ Route::get('/produtos/novo', 'ProdutoController@novo');
 # Post do formulário de adição
 Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
+# Lista de produtos em json
+Route::get('/produtos/json', 'ProdutoController@listaJson');
+
 # Hello World
 Route::get('/', function () {
     return '<h1>Primeira lógica com Laravel</h1>';
