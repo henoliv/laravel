@@ -13,7 +13,7 @@ Route::get(
 Route::get('/produtos/novo', 'ProdutoController@novo');
 
 # Post do formulário de adição
-Route::get('/produtos/adiciona', 'ProdutoController@adiciona');
+Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
 # Hello World
 Route::get('/', function () {

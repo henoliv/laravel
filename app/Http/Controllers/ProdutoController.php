@@ -47,9 +47,13 @@ class ProdutoController extends Controller
         $quantidade = Request::input('quantidade');
 
         # salva no banco
-        DB::insert("insert into produtos
-            (nome, quantidade, valor, descricao) values (?,?,?,?)",
-            [$nome, $quantidade, $valor, $descricao]
+        DB::table('produtos')->insert(
+            [
+                'nome' => $nome,
+                'descricao' => $descricao,
+                'valor' => $valor,
+                'quantidade' => $quantidade
+            ]
         );
 
         # retorna a view
