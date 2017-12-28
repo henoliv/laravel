@@ -40,6 +40,15 @@ class ProdutoController extends Controller
 
     public function adiciona()
     {
-        # TODO
+        # coleta os dados da view
+        $nome = Request::input('nome');
+        $descricao = Request::input('descricao');
+        $valor = Request::input('valor');
+        $quantidade = Request::input('quantidade');
+
+        # salva no banco
+
+        # retorna a view
+        return "$nome, $descricao, $valor, $quantidade";
     }
 }
