@@ -18,8 +18,8 @@
 				<a class="navbar-brand" href="/produtos">Estoque Laravel</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/produtos">Listagem</a></li>
-				<li><a href="/produtos/novo">Novo</a></li>
+				<li><a href="{{action('ProdutoController@lista')}}">Listagem</a></li>
+				<li><a href="{{action('ProdutoController@lista')}}">Novo</a></li>
 			</ul>
 		</div>
 	</nav>

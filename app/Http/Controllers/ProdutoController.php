@@ -57,6 +57,8 @@ class ProdutoController extends Controller
         );
 
         # retorna a view
-        return redirect('produtos')->withInput();
+        return redirect()
+            ->action('ProdutoController@lista')
+            ->withInput(Request::only('nome'));
     }
 }
