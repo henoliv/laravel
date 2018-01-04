@@ -41,3 +41,5 @@ Route::get('/outra', function () {
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
+
+Route::get('login', 'LoginController@login');
