@@ -10,24 +10,24 @@ Route::get(
 )->where('id', '[0-9]+');
 
 # Formulário de adição
-Route::get('/produtos/novo', 'ProdutoController@novo');
+Route::get('produtos/novo', 'ProdutoController@novo');
 
 # Post do formulário de adição
-Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
+Route::post('produtos/adiciona', 'ProdutoController@adiciona');
 
 # Remove um produto
-Route::get('/produtos/remove/{id}', 'ProdutoController@remove')
+Route::get('produtos/remove/{id}', 'ProdutoController@remove')
     ->where('id', '[0-9]+');
 
 # formulário de edição
-Route::get('/produtos/edicao/{id}', 'ProdutoController@edicao')
+Route::get('produtos/edicao/{id}', 'ProdutoController@edicao')
     ->where('id', '[0-9]+');
 
 # Post do formulário de edição
-Route::post('/produtos/edita', 'ProdutoController@edita');
+Route::post('produtos/edita', 'ProdutoController@edita');
 
 # Lista de produtos em json
-Route::get('/produtos/json', 'ProdutoController@listaJson');
+Route::get('produtos/json', 'ProdutoController@listaJson');
 
 # Hello World
 Route::get('/', function () {
@@ -37,3 +37,7 @@ Route::get('/', function () {
 Route::get('/outra', function () {
     return '<h1>Outra lógica com Laravel</h1>';
 });
+
+Auth::routes();
+
+Route::get('home', 'HomeController@index')->name('home');
