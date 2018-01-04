@@ -2,16 +2,14 @@
 
 namespace Estoque\Http\Controllers;
 
-use Estoque\Http\Requests;
-use Estoque\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Auth;
-use Request;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function login(Request $request)
     {
-        $credenciais = Request::only('email', 'password');
+        $credenciais = $request->only('email', 'password');
 
         if (Auth::attempt($credenciais)) {
             return 'Login foi';
