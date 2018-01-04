@@ -12,7 +12,7 @@ class LoginController extends Controller
         $credenciais = $request->only('email', 'password');
 
         if (Auth::attempt($credenciais)) {
-            return 'Login foi';
+            return Auth::user()->name . ' logado com sucesso';
         }
 
         return 'não logou';
