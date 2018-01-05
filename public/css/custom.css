@@ -8,6 +8,10 @@ nav.navbar.navbar-default a{
     color: #FFF;
 }
 
+nav.navbar.navbar-default .dropdown-menu>li>a {
+    color: #000;
+}
+
 li p.navbar-text, a.navbar-brand{
     color: #FFF !important;
     font-weight: bolder;
